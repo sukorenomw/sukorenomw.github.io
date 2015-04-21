@@ -1,10 +1,6 @@
 ---
 layout: post
-title: You're up and running!
+title: Computer And Society - Introduction
 ---
-
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
-
-![_config.yml]({{ site.baseurl }}/images/config.png)
-
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+##Self Determination, Development, and Information
+Topik Blog ini adalah membahas materi komputer masyarakat dengan tema **Self Determination, Development, and Information** Blog ini akan banyak membahas bagaimana pengaruh penekanan informasi terhadap pengembangan diri dari Negara-Negara perkembang dan masyarakat nya dan apa yang dapat dilakukan pemerintah dan organisasi terkait untuk menghindari resiko dan untuk mendapatkan keuntungan potensial
