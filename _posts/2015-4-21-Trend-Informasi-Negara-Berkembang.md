@@ -1,9 +1,9 @@
 ---
 layout: post
+disqus: sukorenomukti
 title: Trend Informasi pada Negara Berkembang
 desc: "Trend Informasi pada Negara Berkembang terkait Self-determination, Development dan Informasi"
 keywords: "komas, Self-determination, informasi, development"
-disqus: "sukorenomukti"
 ---
 
 
