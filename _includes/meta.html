@@ -11,8 +11,15 @@
     <meta property="og:description" content="{{ site.description }}" />
     {% endif %}
     <meta name="author" content="{{ site.name }}" />
-
-    {% if page.title %}
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta property="twitter:title" content="{{ page.title }}" />
+    
+    {% if page.desc %}
+    <meta name="description" content="{{ page.desc }}" />
+    {% else %}
+    <meta name="description" content="Tugas Besar Komputer dan Masyarakat dengan tema Self-Determination, Development, dan Informasi" />
+    {% endif %}
+ 
+    {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}" />
+    {% else %}
+    <meta name="keywords" content="jekyll, blog, komas, komputer masyarakat, komputer dan masyarakat, development, informasi, information, self-determination, negara berkembang, github, blog on github, development" />
     {% endif %}
