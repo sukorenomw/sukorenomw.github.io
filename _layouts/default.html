@@ -2,7 +2,17 @@
 <html>
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
+    {% if page.desc %}
+    <meta name="description" content="{{ page.desc }}" />
+    {% else %}
+    <meta name="description" content="Tugas Besar Komputer dan Masyarakat dengan tema Self-Determination, Development, dan Informasi" />
+    {% endif %}
+ 
+    {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}" />
+    {% else %}
+    <meta name="keywords" content="jekyll, blog, komas, komputer masyarakat, komputer dan masyarakat, development, informasi, information, self-determination, negara berkembang, github, blog on github, development" />
+    {% endif %}
     {% include meta.html %}
 
     <!--[if lt IE 9]>
