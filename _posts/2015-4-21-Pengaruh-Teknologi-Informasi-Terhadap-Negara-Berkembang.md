@@ -5,8 +5,6 @@ desc: "Pengaruh Informasi ke negara Berkembang"
 keywords: "Information, Informasi, Teknologi, Negara Berkembang, Develop, Developing Countries, Technology Information, Teknologi Informasi"
 ---
 
-##Pengaruh Teknologi Informasi terhadap Negara Berkembang
-
 Selama dua puluh tahun terakhir, telekomunikasi seluler telah menciptakan lompatan bagus ke depan. Vodafone bisa menjadi pemimpin pasar dalam kesenjangan akses kepada individu dan data putaran dunia dua puluh empat jam sehari. Properti yang disediakan oleh teknologi bergerak mendukung pembangunan ekonomi. Dampaknya terhadap negara berkembang seperti Republik Kenya telah sangat positif. beberapa keluarga tidur didaerah terpencil besar negara. menempatkan dalam sambungan telepon atas orang jarak mahal dan sulit.
 
 Vodafone dalam kemitraan dengan Safaricom tambahan diakui persyaratan untuk meningkatkan gerakan dan keamanan uang tunai untuk memungkinkan bisnis kecil untuk tumbuh. Sebagai jawaban, Vodafone menciptakan M-PESA (harfiah 'mobile money') yang beroperasi dengan dana dari uang Pendalaman Challenge Fund (FDCF). ini bisa menjadi dana Britania Raya didirikan untuk membantu pembangunan internasional. Sebuah jaringan mobile yang cepat dan mudah untuk dimasukkan ke dalam dan sedikit mahal untuk menjalankan daripada sambungan telepon rumah. M-PESA menyediakan mudah, aman, murah sistem transfer tunai:
