@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Pengaruh Teknologi Informasi terhadap Negara Berkembang
-desc: "Pengaruh Informasi ke negara Berkembang"
-keywords: "Information, Informasi, Teknologi, Negara Berkembang, Develop, Developing Countries, Technology Information, Teknologi Informasi"
+description: "Pengaruh Informasi ke negara Berkembang"
+tags: [Information, Informasi, Teknologi, Negara Berkembang, Develop, Developing Countries]
+modified: 2015-04-21
+comments: true
+share: true
 ---
 
 Selama dua puluh tahun terakhir, telekomunikasi seluler telah menciptakan lompatan bagus ke depan. Vodafone bisa menjadi pemimpin pasar dalam kesenjangan akses kepada individu dan data putaran dunia dua puluh empat jam sehari. Properti yang disediakan oleh teknologi bergerak mendukung pembangunan ekonomi. Dampaknya terhadap negara berkembang seperti Republik Kenya telah sangat positif. beberapa keluarga tidur didaerah terpencil besar negara. menempatkan dalam sambungan telepon atas orang jarak mahal dan sulit.

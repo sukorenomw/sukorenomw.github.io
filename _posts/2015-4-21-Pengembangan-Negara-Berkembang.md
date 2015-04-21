@@ -1,7 +1,11 @@
 ---
 layout: post
 title: Proses Pengembangan Negara-Negara Berkembang
-keywords: "developing, Development, Development Countries, Pengembangan, Negara Berkembang, komas, Bab5, Self Determination"
+description: "Proses Pengembangan Negara-Negara Berkembang"
+tags: [developing, Development, Development Countries, Pengembangan, Negara Berkembang, komas, Bab5, Self Determination]
+modified: 2015-04-21
+comments: true
+share: true
 ---
 
 Pengembangan mengacu pada negara-negara berkembang yang beroperasi mereka tinggi-tinggi tangga kinerja ekonomi, standar hidup, properti dan kesetaraan yang membedakan mereka dari dugaan negara-negara maju. tujuan di negara-negara berkembang menjadi "maju" datang semua jalan ke keputusan pengadilan atau jalur matematika diterapkan dalam pasir yang biasanya didukung campuran indikator pembangunan.

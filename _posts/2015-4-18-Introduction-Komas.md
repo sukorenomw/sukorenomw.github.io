@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Self Determination, Development and Information
-desc: "Pengertian dari Komas, Self Determination, Development dan Information"
-keywords: "Self Determination,Komas, Development, Information, Percaya Diri, Negara Berkembang, Pengembangan"
+description: "Pengertian dari Komas, Self Determination, Development dan Information"
+tags: [Self Determination,Komas, Development, Information, Percaya Diri, Negara Berkembang, Pengembangan]
+modified: 2015-04-18
+comments: true
+share: true
 ---
 
 ####Self Determination
