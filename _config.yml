@@ -3,10 +3,10 @@
 #
 
 # Name of your site (displayed in the header)
-name: Your Name
+name: Sukoreno Mukti W
 
 # Short bio or description (displayed in the header)
-description: Web Developer from Somewhere
+description: Studied Informatics Engineering at ITHB Bandung
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
@@ -19,14 +19,14 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 footer-links:
   dribbble:
   email:
-  facebook:
+  facebook: sukorenomw
   flickr:
-  github: barryclark/jekyll-now
-  instagram:
-  linkedin:
+  github: sukorenomw
+  instagram: sukorenomw
+  linkedin: sukorenomw
   pinterest:
   rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
-  twitter: jekyllrb
+  twitter: sukorenomw
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
 
@@ -39,7 +39,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url:
+url: http://sukorenomw.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
