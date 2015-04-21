@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Trend Informasi pada Negara Berkembang
+descripton: Trend Informasi pada Negara Berkembang terkait Self-determination, Development dan Informasi
+keyword: komas, Self-determination, informasi, development
 ---
 
 
