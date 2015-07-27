@@ -1,97 +1,424 @@
----
-layout: home
-title: BLOG
-description: "The personal blog of Hossain Mohd. Faysal, a doctoral candidate in Electrical Engineering at University of Pennsylvania."
-headline: An Engineer's Diary
-tags: [Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsylvania, doha, Qatar]
----
-{% if site.paginate %}
-	{% for post in paginator.posts %}
-    <article class="notepad-index-post post row">
-        <div class="small-12 medium-3 large-2 columns datetime">
-            <span class="notepad-post-meta">
-                <time datetime="{{ post.date | date_to_xmlschema }}">
-                    <span class="day">
-                        {{ post.date | date: "%d" }}
-                    </span>
-                    <span class="month-year">
-                        {{ post.date | date: "%B %Y" }}
-                    </span>
-                </time>
-            </span>
-        </div>
-        <div class="small-12 medium-9 large-10 columns">
-            <header class="notepad-post-header">
-                <h3 class="notepad-post-title">
-                    <a href="{{ site.url }}{{ post.url }}">
-                        {{ post.title }}
-                    </a>
-                </h3>
-            </header>
-            <section class="notepad-post-excerpt">
-                <p>{{ post.content | strip_html | truncatewords:40 }}</p>
-            </section>
-            
-                <div class="notepad-index-post-tags">
-                {% for tag in post.categories %}<a href="{{ site.url }}/categories/index.html#{{ post.categories | cgi_encode }}" title="Other posts from the {{ tag | capitalize }} category">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
-                    
-                </div>
-            
-        </div>
-    </article>
-	{% endfor %}
-    <nav class="pagination" role="navigation">
-    {% if paginator.previous_page %}
-	    {% if paginator.previous_page == 1 %}
-	    <a class="newer-posts" href="{{ site.url }}"><i class="fa fa-chevron-left"></i> Newer</a>
-	    {% else %}
-	    <a class="newer-posts" href="{{ site.url }}/page{{ paginator.previous_page }}"><i class="fa fa-chevron-left"></i> Newer</a>
-	    {% endif %}
-	{% else %}
-    <span class="newer-posts faded"><i class="fa fa-chevron-left"></i> Newer</span>
-    {% endif %}
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
 
-    
-    <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    	{% if paginator.next_page %} 
-        <a class="older-posts" href="{{ site.url }}/page{{ paginator.next_page }}/">Older <i class="fa fa-chevron-right"></i></a>
-    	{% else %}
-    	<span class="older-posts faded">Older <i class="fa fa-chevron-right"></i></span>
-    	{% endif %}
-	</nav>
-{% else %}
-	{% for post in site.posts %}
-    <article class="notepad-index-post post row">
-        <div class="small-12 medium-3 large-2 columns datetime">
-            <span class="notepad-post-meta">
-                <time datetime="{{ post.date | date_to_xmlschema }}">
-                    <span class="day">
-                        {{ post.date | date: "%d" }}
-                    </span>
-                    <span class="month-year">
-                        {{ post.date | date: "%B %Y" }}
-                    </span>
-                </time>
+
+	<!-- /////////// Website Credits ///////////
+
+      http://tympanus.net - For slider ( You guys are awesome. )
+      http://codyhouse.co - For the Animated text.
+      http://thenounproject.com - For amazing icons.
+      http://animate.css - For CSS Animations.
+      http://foundation.zurb.com - Framework.
+
+      Thanks to @liveashish and @sid.9111 for helping me out. :)
+
+    ////////////////////////////////////////// -->
+
+
+    <meta charset="utf-8" />
+    <meta name="description" content="Hello! I am Sukoreno Mukti, you can call me Reno, i'm 21 years old programmer, living in Bandung, West Java, Indonesia. I currently studying Informatics Engineering at Institut Teknologi Harapan Bangsa Bandung, Indonesia.">
+    <meta name="keywords" content="Programming, programmer, server, websites, mobile apps">
+    <meta name="author" content="Sukoreno Mukti Widodo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <!-- <link rel="manifest" href="img/favicon/manifest.json"> -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <!-- <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png"> -->
+    <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:title" content="Sukoreno Mukti Widodo | Web, mobile and server Programmer"/>
+    <meta property="og:url" content="http://sukorenomw.github.io"/>
+    <meta property="og:site_name" content="Sukoreno Mukti Widodo | Web, mobile and server Programmer"/>
+    <meta property="og:description" content="Hello! I am Sukoreno Mukti, you can call me Reno, i'm 21 years old programmer, living in Bandung, West Java, Indonesia. I currently studying Informatics Engineering at Institut Teknologi Harapan Bangsa Bandung, Indonesia."/>    
+
+
+    <title>Sukoreno Mukti Widodo | Web, mobile and server Programmer</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/icon.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+   	<script type="text/javascript">
+     jQuery(document).ready(function($) {  
+      $(window).load(function(){
+        $('#preload_wrapper').fadeOut('slow',function(){$(this).remove();});
+      });
+
+      });
+    </script>
+
+    <script>
+        var didScroll;
+      var lastScrollTop = 0;
+      var delta = 2;
+      var navbarHeight = $('header').outerHeight();
+
+      $(window).scroll(function(event){
+          didScroll = true;
+      });
+
+      setInterval(function() {
+          if (didScroll) {
+              hasScrolled();
+              didScroll = false;
+          }
+      }, 250);
+
+      function hasScrolled() {
+          var st = $(this).scrollTop();
+          
+         
+          if(Math.abs(lastScrollTop - st) <= delta) return;
+          if (st > lastScrollTop && st > navbarHeight){
+            $('header').removeClass('nav-down').addClass('nav-up');
+          } else {
+            if(st + $(window).height() < $(document).height()) {
+                $('header').removeClass('nav-up').addClass('nav-down');
+            }
+          }
+          lastScrollTop = st;
+      }
+    </script> 
+
+    <script type="text/javascript">
+
+      jQuery(window).scroll(function () {
+        if (jQuery(this).scrollTop() == 0) {
+          $('header').addClass('reachedTop');
+     
+        } else {
+          $('header').removeClass('reachedTop');
+        }
+      });
+    </script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {  
+        $("#guy").hover(
+          function () {
+            $('#hi').addClass('animated jello');
+          },
+          function () {
+            $('#hi').removeClass('animated jello');
+          }
+        );
+        $(".logo").hover(
+          function () {
+            $('.logo span').addClass('animated bounce');
+          },
+          function () {
+            $('.logo span').removeClass('animated bounce');
+          }
+        );
+      });    
+    </script>
+  </head>
+  <body>
+  <div id="preload_wrapper">
+    <div class="preloader animated zoomIn" id="preloader"></div>
+  </div>
+  <header class="nav-down reachedTop">
+    <div class="wrapper" id="wrapper">
+      <div class="row" >
+        <div class="small-2  columns">
+          <a href="#intro" class="logo">SMW<span>.</span></a>            
+        </div>
+        <div class="small-10  columns">
+          <ul class="menu">
+            <li> <a href="#me">me</a></li>
+            <li> <a href="#projects">projects</a></li>
+            <li><a href="#hello">more info</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+   <!-- ///////////////////////////// Start Intro Section ///////////////////////////// -->
+  <section class="intro" id="intro"> 
+    <div class="row" id="middle_row">
+      <div class="medium-6  columns" style="text-align:center;position:relative;">
+        <img src="img/guy.png" id="guy" class="guy" alt="guy"/>
+        <img src="img/hi.png" id="hi" class="animated jello" alt="hi"/>
+      </div>
+
+      <div class="medium-6 columns">
+        <section class="cd-intro">
+          <h1 class="cd-headline clip is-full-width">
+            <span class="design">I code</span><br>
+            <span class="cd-words-wrapper">
+              <b class="is-visible">websites.</b>
+              <b>mobile apps<span class="dot">.</span></b>
+              <b>server stuff<span class="dot">.</span></b>
+              <b>game script<span class="dot">.</span></b>
             </span>
+          </h1>
+        </section> 
+        <a href="#me" class="btn"> Know more</a>
+      </div>
+    </div>
+  </section>
+  <!-- ///////////////////////////// End Intro Section ///////////////////////////// -->
+
+  <!-- ///////////////////////////// Start About Section ///////////////////////////// -->
+
+  <section class="about" id="me" >
+    <div class="row">
+
+      <div class="large-12">
+        <h1>About me.</h1>
+        <p>Studied Informatics Engineering at Institut Teknologi Harapan Bangsa, Bandung, Indonesia. I am passionate about developing web based application using databases (Oracle, MySQL), PHP programming language with CodeIgniter Framework, currently working on Multi Theft Auto GTA SA game server with average 90 player per day, i also joined ubuntu launchpad team, ubuntu indonesian team and currently marked for bug management</p>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 20px;">
+         <div class="medium-3 columns">
+            <h2> Web Languages</h2>
+         </div>
+         <div class="medium-9  columns">
+            <ul class="lang">
+              <li>html</li>
+              <li>css</li>
+              <li>javascript</li>
+            </ul>    
         </div>
-        <div class="small-12 medium-9 large-10 columns">
-            <header class="notepad-post-header">
-                <h3 class="notepad-post-title">
-                    <a href="{{ site.url }}{{ post.url }}">
-                        {{ post.title }}
-                    </a>
-                </h3>
-            </header>
-            <section class="notepad-post-excerpt">
-                <p>{{ post.content | strip_html | truncatewords:100 }}</p>
-            </section>
+    </div>
+    <div class="row" style="margin-top: 20px;">
+         <div class="medium-3 columns">
+            <h2> Programming Languages</h2>
+         </div>
+         <div class="medium-9  columns">
+            <ul class="lang">
+              <li>Ruby</li>
+              <li>PHP</li>
+              <li>Java</li>
+              <li>Obj-C</li>
+            </ul>    
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px;">
+         <div class="medium-3 columns">
+            <h2> Web Frameworks</h2>
+         </div>
+         <div class="medium-9  columns">
+            <ul class="lang">
+                <li>Ruby on Rails</li>
+                <li>Laravel</li>
+            </ul>    
+        </div>
+    </div>
+  </section>
+  <!-- ///////////////////////////// End About Section ///////////////////////////// -->
+  <!-- ///////////////////////////// Start Projects Section ///////////////////////////// -->
+    <section class="projects" id="projects">
+      <div class="row">
+        <h1>Projects.</h1>
+          <div id="cbp-fwslider" class="cbp-fwslider">
+            <ul>
+              <li>
+                 <a href="#" class="prjct_img"><img src="img/projects/1.jpg" style="width:50%;" alt="Noshky"/></a>
+                 <h2 class="name">Indolife Game Portal</h2>
+                 <p class="desc"> Web portal for indolife MTA server <br>shortcut to forum, website and game.</p>
+                 <a class="btn project" target="_blank" href="http://portal.indoliferoleplay.com">VIsit Website</a>
+              </li>
+              <li>
+                <a href="#" class="prjct_img"><img src="img/projects/2.jpg" style="width:70%;" alt="Pilot App"/></a>
+                <h2 class="name">Indoliferoleplay.com</h2>
+                <p class="desc">Website and server statistic <br>for ILRP game server.</p>
+                <a class="btn project" target="_blank" href="http://www.indoliferoleplay.com">Visit website</a>
+              </li>
+
+
+                <li>
+                   <a href="#" class="prjct_img"><img src="img/projects/3.jpg" style="width:70%;" alt="Stockroom"/></a>
+                      <h2 class="name">SaaS Basic</h2>
+                       <p class="desc"> It's a basic feature of a SaaS stuff <br>it help developer to extends their SaaS applications easily.</p>
+                       <a class="btn project" href="#projects">It's Internal Stuff</a>
+
+                </li>
+
+                 <li>
+                        <a href="#" class="prjct_img"><img src="img/projects/5.jpg" style="width:50%;" alt="Dribbble App"/></a>
+                      <h2 class="name">Online Election</h2>
+                       <p class="desc">Online Election Apps for <br/>Chairman of Informatics Engineering Students Association</p>
+                       <a class="btn project" target="_blank" href="#projects">It's Internal Stuff</a>
+
+                </li>
+
+                <li>
+                        <a href="#" class="prjct_img"><img src="img/projects/6.jpg" style="width:50%;" alt="Dribbble App"/></a>
+                      <h2 class="name">Server Monitoring</h2>
+                       <p class="desc">Server hardware usage statistic <br/>and bandwidth usage monitoring for MTA server</p>
+                       <a class="btn project" target="_blank" href="#projects">It's Internal Stuff</a>
+
+                </li>
+
+
+                 <li>
+                        <a href="#" class="prjct_img"><img src="img/projects/8.jpg" style="width:70%;" alt="Personal Website"/></a>
+                      <h2 class="name">Android Games</h2>
+                       <p class="desc">This was my first android games, <br>simple game to catch time.</p>
+                       <a class="btn project" target="_blank" href="#">Get the Apps</a>
+
+                </li>
+              </ul>
+            </div>
+
+      </div>
+
+
+
+    </section>
+
+
+    <!-- ///////////////////////////// End Projects Section ///////////////////////////// -->
+
+
+
+
+<!-- ///////////////////////////// Start Footer Section ///////////////////////////// -->
+
+
+    <section class="sayhello" id="hello">
+
+       <div class="row">
+         
+            <div class="large-6 columns" style="margin-left: 0;padding-left: 0;">
+                      <h1>More Info.</h1>
+                      <p>I am available for freelancing. <br>Feel free to contact me. <br> portofolio : <a href="sukorenomw.github.io">sukorenomw.github.io</a><br>Phone : <a href="#">+6281910513704</a></p>
+                   </div>
+
+
+                     <div class="large-6  columns">
+                      <a href="mailto:sukorenomw@gmail.com" class="email">sukorenomw@gmail.com</a>
+
+                      <div style="clear:both"></div>
+
+                      <ul class="icons">
+                        <li> <a href="http://linkedin.com/in/sukorenomw" target="_blank" class="icon github"><span class="icon-linkedin"></span></a></li>
+
+                         <li> <a href="http://facebook.com/sukorenomw" target="_blank" class="icon facebook"><span class="icon-facebook"></span></a></li>
+
+                          <li> <a href="http://twitter.com/sukorenomw" target="_blank" class="icon twitter"><span class="icon-twitter"></span></a></li>
+                      </ul>
+
+                       <div style="clear:both"></div>
+
+                     
+
+                   </div>
+
+
+
+
+
+             
+
+
+      </div>
+
+
+
+
+
+
+
+    </section>
+
+
+ 
+
+
+
+<!-- ///////////////////////////// End Footer Section ///////////////////////////// -->
+
+
+
+     
+    <script src="js/jquery.cbpFWSlider.min.js"></script>
+    <script>
+      $( function() {
+        
+        $( '#cbp-fwslider' ).cbpFWSlider();
+
+      } );
+    </script>
+
+     <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+     <script type="text/javascript">
             
-                <div class="notepad-index-post-tags">
-                {% for tag in post.categories %}<a href="{{ site.url }}/categories/index.html#{{ post.categories | cgi_encode }}" title="Other posts from the {{ tag | capitalize }} category">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
+             $(function() {
+                $('header a').bind('click',function(event){
+                    var $anchor = $(this);
                     
-                </div>
-            
-        </div>
-    </article>
-	{% endfor %}  
-{% endif %}
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500,'easeInOutExpo');
+                    event.preventDefault();
+                });
+            });
+
+             $(function() {
+                $('#intro a').bind('click',function(event){
+                    var $anchor = $(this);
+                    
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500,'easeInOutExpo');
+                    event.preventDefault();
+                });
+            });
+
+        </script>
+
+
+
+  
+    <script src="js/foundation.min.js"></script>
+     <script>
+      $(document).foundation();
+    </script>
+
+   <script src="js/textRotate.js"></script>
+
+
+
+ <!-- //////// Google Analytics ////////// -->
+
+
+           <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          
+            ga('create', 'UA-48769844-1', 'auto');
+            ga('send', 'pageview');
+
+          </script>
+
+
+
+
+
+ 
+
+  </body>
+</html>
