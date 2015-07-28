@@ -330,6 +330,10 @@ a.btn:hover{
   color: #fff
 }
 
+ul li.skills:hover{
+  color: #8C8686;
+}
+
 a.btn.project{
     background: transparent;
     border: 1px solid #fff;
